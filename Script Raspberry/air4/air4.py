@@ -17,20 +17,20 @@ LoadModule_Upload = config['MODULES']['LoadModule_Upload']
 LoadModule_ReadSensors = config['MODULES']['LoadModule_ReadSensors']
 
 if LoadModule_Test == ("yes"):
-    sys.path.insert(0, './modules')
-    import air4_Test.py
+    sys.path.insert(0, './Modules')
+    import air4_Test
     
-    LMUpdate = subprocess.Popen([sys.executable, "modules\air4_Test.py"])
-    LMUpdate.communicate()
+    #LMUpdate = subprocess.Popen([sys.executable, "Modules\air4_Test.py"])
+    #LMUpdate.communicate()
 
 if LoadModule_Update == ("yes"):
-    LMUpdate = subprocess.Popen([sys.executable, "modules\air4_Update.py"])
+    LMUpdate = subprocess.Popen([sys.executable, "Modules\air4_Update.py"])
     LMUpdate.communicate()
 
 if LoadModule_Upload == ("yes"):
-    LMUpload = subprocess.Popen([sys.executable, "modules\air4_Upload.py"])
+    LMUpload = subprocess.Popen([sys.executable, "Modules\air4_Upload.py"])
     LMUpload.communicate()
 
 if LoadModule_ReadSensors == ("yes"):
-    LMUReadSensors = subprocess.Popen([sys.executable, "modules\air4_ReadSensors.py"])
+    LMUReadSensors = subprocess.Popen([sys.executable, "Modules\air4_ReadSensors.py"])
     LMUReadSensors.communicate()
